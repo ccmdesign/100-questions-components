@@ -1,0 +1,13 @@
+.small-only { @include breakpoint($medium-up) { display: none !important; } }
+.medium-up { @include breakpoint($small-only) { display: none !important; } }
+.large-only { @include breakpoint($touch) { display: none !important; } }
+.touch-only { @include breakpoint($large) { display: none !important; } }
+
+.missing-content { outline: 2px solid red; }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-moz-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+}
