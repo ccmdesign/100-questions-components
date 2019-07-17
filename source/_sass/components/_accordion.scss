@@ -1,0 +1,105 @@
+.accordion {
+    list-style: none;
+    padding: 0;
+
+    &-item {
+        position: relative;
+        background-color: $colors-blue;
+        box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+        border-radius: 10px;
+        padding: 28px 36px;
+        transition: background-color 0.13s $transition-regular;
+
+        & + & {
+            margin-top: 28px;
+        }
+
+        &--active {
+            background-color: $colors-white;
+
+            .accordion-item__title {
+                color: $colors-blue;
+                
+            }
+
+            .accordion-item__content {
+                color: rgba($colors-default, 0.5);
+            }
+
+            .accordion-item__toggle-button {
+                color: $colors-white;
+                background-color: $colors-blue;
+
+                &::before {
+                    transform: scale(0);
+                }
+
+                &::after {
+                    background-color: $colors-white;
+                }
+            }
+        }
+
+        &__title {
+            color: $colors-white;
+            margin: 0;
+            padding-right: 48px;
+            transition: color 0.13s $transition-regular;
+            font-weight: 500;
+            font-size: 1.125em;
+        }
+
+        &__content {
+            color: $colors-white;
+            margin: 0;
+            overflow: hidden;
+            height: 100%;
+            transition: color 0.33s $transition-regular, height 0.33s $transition-regular;
+            will-change: height;
+
+            & > p:first-child {
+                padding-top: 28px;
+            }
+        }
+
+        &__toggle-button {
+            position: absolute;
+            top: 24px;
+            right: 34px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            border: 0;
+            color: $colors-blue;
+            background: $colors-white;
+            border-radius: 50%;
+            transition: color 0.33s $transition-regular, background-color 0.33s $transition-regular;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 9px;
+                left: 14px;
+                width: 2px;
+                height: 12px;
+                background-color: $colors-blue;
+                border-radius: 2px;
+                transform-origin: center;
+                transform: scale(1);
+                transition: background-color 0.33s $transition-regular, transform 0.33s $transition-regular;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 14px;
+                left: 9px;
+                width: 12px;
+                height: 2px;
+                background-color: $colors-blue;
+                border-radius: 2px;
+                transition: background-color 0.33s $transition-regular;
+            }
+        }
+    }
+}

@@ -30,7 +30,7 @@ $fonts-strong: 'Proxima Nova Black', 'Montserrat', 'proxima-nova', sans-serif;
 
 // Vars for Colors
 $colors-default: #0D4365;
-$colors-white: #ffffff;
+$colors-white: #FFFFFF;
 $colors-white-alt: #E7F0F7;
 $colors-dark: #022840;
 $colors-deep-dark: #001E31;
@@ -69,6 +69,7 @@ $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 @import 'components/quote-card';
 @import 'components/profile-cards';
 @import 'components/footer';
+@import 'components/accordion';
 
 @import 'custom';
 @import 'dev';
