@@ -3,6 +3,11 @@
 .large-only { @include breakpoint($touch) { display: none !important; } }
 .touch-only { @include breakpoint($large) { display: none !important; } }
 
+.clear-divider {
+    border: 0;
+    height: 48px;
+}
+
 .missing-content { outline: 2px solid red; }
 
 @mixin placeholder {
@@ -10,4 +15,75 @@
   &:-moz-placeholder { @content }
   &::-moz-placeholder { @content }
   &:-ms-input-placeholder { @content }
+}
+
+@mixin mixColors {
+  &--pink {
+      $backgroundColor: $colors-pink !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--red {
+      $backgroundColor: $colors-red !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--purple {
+      $backgroundColor: $colors-purple !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--dark-yellow {
+      $backgroundColor: $colors-dark-yellow !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--cyan {
+      $backgroundColor: $colors-cyan !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--bright-green {
+      $backgroundColor: $colors-bright-green !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+
+  &--green-alt {
+      $backgroundColor: $colors-green-alt !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+
+  &--tomato {
+      $backgroundColor: $colors-tomato !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+
+  &--blue {
+      $backgroundColor: $colors-blue !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--yellow-alt {
+      $backgroundColor: $colors-yellow-alt !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--yellow {
+      $backgroundColor: $colors-yellow !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
 }

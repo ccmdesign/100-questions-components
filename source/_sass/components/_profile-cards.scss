@@ -1,0 +1,56 @@
+.profile-cards {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-row-gap: 48px;
+    grid-template-columns: repeat(1, 100%);
+    grid-auto-rows: 1fr;
+
+    @include breakpoint($small-only) {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    @include breakpoint($large) {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    @include breakpoint($x-large) {
+        grid-template-columns: repeat(6, auto);
+    }
+}
+
+.profile-card {
+    background-color: $colors-white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+    padding: 0 32px 40px 32px;
+    justify-self: center;
+    text-align: center;
+    margin-top: 40px;
+
+    @include breakpoint($large) {
+        max-width: 256px;
+    }
+
+    img {
+        margin-top: -40px;
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+    }
+
+    h4 {
+        color: $colors-blue;
+        margin: 18px 0;
+    }
+
+    h5 {
+        color: $colors-purple;
+        margin: 0;
+        font-weight: 500;
+    }
+}

@@ -17,4 +17,9 @@
       max-width: $app-body-large;
     }
   }
+
+  &-wrapper {
+    background-color: $colors-white-alt;
+    padding-bottom: 32px;
+  }
 }

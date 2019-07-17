@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $colors-dark-blue;
+    padding: 40px 20px;
+    min-height: 60vh;
+    max-height: 650px;
+
+    @include breakpoint($large) {
+        padding: 170px 33%;
+    }
+
+    &-title {
+        position: relative;
+        font-family: $fonts-strong;
+        color: $colors-white-alt;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        text-align: center;
+        font-weight: 900;
+        padding-top: 110px;
+
+        @include breakpoint($large) {
+            font-size: 4em;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $colors-deep-yellow;
+            width: 4px;
+            height: 90px;
+            top: 0;
+            left: calc(50% - 2px);
+        }
+    }
+
+    &-text {
+        color: $colors-gray-blue;
+        text-align: center;
+    }
+
+    & + .app-body {
+        margin-top: -24px;
+    }
+}

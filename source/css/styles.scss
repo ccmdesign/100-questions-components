@@ -26,7 +26,7 @@ $x-large: 85.374em;
 // Typography variables
 $fonts-primary: 'proxima-nova', sans-serif;
 $fonts-secondary: serif;
-$fonts-strong: 'Proxima Nova Black', 'Montserrat' 'proxima-nova', sans-serif;
+$fonts-strong: 'Proxima Nova Black', 'Montserrat', 'proxima-nova', sans-serif;
 
 // Vars for Colors
 $colors-default: #0D4365;
@@ -36,6 +36,7 @@ $colors-dark: #022840;
 $colors-deep-dark: #001E31;
 $colors-black: #000000;
 $colors-cyan: #39B7CE;
+$colors-gray-blue: #64869F;
 $colors-purple: #6D33B8;
 $colors-dark-blue: #0D4365;
 $colors-light-dark-blue: #114B6F;
@@ -54,11 +55,20 @@ $colors-green-alt: #00A367;
 $colors-red: #FF0D2F;
 $colors-red-alt: #E50C2A;
 $colors-red-alt-2: #EB3B3B;
-$colors-orange: #DB4C2E;
+$colors-tomato: #DB4C2E;
 $colors-pink: #E80D62;
+
+$transition-regular: cubic-bezier(0.4, 0.0, 0.2, 1);
+$transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 
 @import 'base';
 @import 'main';
+
+@import 'components/button';
+@import 'components/header';
+@import 'components/quote-card';
+@import 'components/profile-cards';
+@import 'components/footer';
 
 @import 'custom';
 @import 'dev';

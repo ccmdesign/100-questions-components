@@ -1,0 +1,84 @@
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $colors-white;
+    box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+    border-radius: 10px;
+    padding: 90px 64px;
+
+    @include breakpoint($large) {
+        padding: 90px 16.67%;
+        flex-direction: row;
+    }
+
+    &__portrait {
+        flex: 1;
+        text-align: center;
+
+        img {
+            width: 176px;
+            height: 176px;
+            border-radius: 50%;
+        }
+
+        @include breakpoint($large) {
+            flex: 0;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 48px 0 0 0;
+
+        @include breakpoint($large) {
+            margin: 0 0 0 48px;
+
+            p {
+                font-size: 1.5em;
+            }
+
+            h4, h5 {
+                display: inline-block;
+                margin: 0;
+            }
+
+            h5 {
+                margin-left: 16px;
+            }
+        }
+
+        p {
+            position: relative;
+            font-size: 1.125em;
+            color: rgba($colors-dark-blue, 0.5);
+
+            &::before {
+                font-family: Georgia, serif;
+                position: absolute;
+                content: '\201C';
+                color: rgba($colors-dark-blue, 0.1);
+                font-size: 5em;
+                top: -32px;
+                left: -56px;
+                font-weight: bolder;
+
+                @include breakpoint($large) {
+                    top: -90px;
+                    left: 0;
+                }
+            }
+        }
+
+        h4 {
+            color: $colors-blue;
+        }
+
+        h5 {
+            color: $colors-purple;
+        }
+    }
+
+}
