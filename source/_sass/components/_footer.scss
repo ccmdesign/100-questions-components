@@ -41,6 +41,10 @@
             padding: 0 0 24px 0;
         }
 
+        img {
+            max-width: 100%;
+        }
+
         @include breakpoint($large) {
             padding: 0;
         }
@@ -48,5 +52,11 @@
 
     &__column {
         flex: 1;
+
+        & + & {
+            @include breakpoint($large) {
+                margin-left: 40px;
+            }
+        }
     }
 }

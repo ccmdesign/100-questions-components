@@ -16,12 +16,28 @@
         text-decoration: none;
     }
 
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.67;
+    }
+
     &--alt {
         border-radius: 10px;
         font-size: 0.9375em;
         font-weight: 300;
-        padding: 22px 78px 22px 78px;
+        padding: 18px 64px 18px 64px;
         box-shadow: none;
+    }
+
+    &--block {
+        display: block;
+    }
+
+    &--block-on-touch {
+        @include breakpoint($touch) {
+            display: block;
+            width: 100%;
+        }
     }
 
     @include mixColors {
@@ -33,4 +49,9 @@
             background-color: lighten($backgroundColor, 5);
         }
     }
+}
+
+button.button {
+    border: 0;
+    cursor: pointer;
 }
