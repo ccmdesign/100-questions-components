@@ -29,6 +29,8 @@
             justify-content: center;
 
             @include breakpoint($large) {
+                justify-content: flex-start;
+                padding-top: 28px;
                 flex: 0;
             }
         }
@@ -45,6 +47,16 @@
 
         & + & {
             margin-top: 28px;
+        }
+
+        &-subsection {
+            margin-top: 36px;
+            border-top: 1px solid rgba($colors-dark-blue, 0.1);
+            padding: 36px 0 18px 0;
+
+            .card-list__item__left {
+                flex: 1;
+            }
         }
     }
 

@@ -1,0 +1,38 @@
+.voting-wrapper {
+    width: 100%;
+}
+
+.voting-button {
+    display: block;
+    text-align: center;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    padding: 16px 0;
+    transition: transform 0.13s $transition-regular;
+
+    @include breakpoint($large) {
+        width: auto;
+        padding: 0 32px;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    object, img {
+        display: inline-block;
+        pointer-events: none;
+    }
+}
+
+.voting-votes {
+    text-align: center;
+    font-size: 4em;
+    line-height: 1;
+
+    @include mixColors {
+        color: $backgroundColor;
+    }
+}

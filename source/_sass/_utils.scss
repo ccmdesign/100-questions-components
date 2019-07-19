@@ -8,6 +8,8 @@
     height: 48px;
 }
 
+.img-wrapper { img { max-width: 100%} }
+
 .missing-content { outline: 2px solid red; }
 
 @mixin placeholder {
@@ -33,6 +35,12 @@
   &--red-alt {
     $backgroundColor: $colors-red-alt !global;
     $fontColor: $colors-white-alt !global;
+    @content
+  }
+
+  &--red-alt-2 {
+    $backgroundColor: $colors-red-alt-2 !global;
+    $fontColor: $colors-white !global;
     @content
   }
 

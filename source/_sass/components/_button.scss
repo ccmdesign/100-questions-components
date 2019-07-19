@@ -10,6 +10,14 @@
     color: $colors-dark;
     transition: background-color 0.13s $transition-regular;
 
+    &--small {
+        padding: 16px 48px 18px 48px;
+    }
+
+    &--shadowless {
+        box-shadow: none;
+    }
+
     &:hover {
         background-color: $colors-white;
         color: $colors-black;
