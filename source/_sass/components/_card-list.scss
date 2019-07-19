@@ -1,0 +1,75 @@
+.card-list {
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+
+    &__item {
+        background-color: $colors-white;
+        box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+        border-radius: 10px;
+        padding: 36px 54px;
+
+        &--columns {
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint($large) {
+                flex-direction: row;
+            }
+        }
+
+        &__left, &__right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__left {
+            align-items: center;
+            justify-content: center;
+
+            @include breakpoint($large) {
+                flex: 0;
+            }
+        }
+
+        &__right {
+            justify-content: space-between;
+            margin: 36px 0 0 0;
+            
+            @include breakpoint($large) {
+                flex: 1;
+                margin: 0 0 0 54px;
+            }
+        }
+
+        & + & {
+            margin-top: 28px;
+        }
+    }
+
+    &__title {
+        color: $colors-dark-blue;
+
+        @include mixColors {
+            color: $backgroundColor;
+        }
+    }
+
+    &__text {
+        color: $colors-dark-blue;
+    }
+
+    &__footer-line {
+        display: inline-block;
+        margin: 0;
+        color: $colors-blue;
+    }
+
+    &__portrait {
+        img {
+            width: 132px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -30,6 +30,12 @@
       @content
   }
 
+  &--red-alt {
+    $backgroundColor: $colors-red-alt !global;
+    $fontColor: $colors-white-alt !global;
+    @content
+  }
+
   &--purple {
       $backgroundColor: $colors-purple !global;
       $fontColor: $colors-white !global;
@@ -61,13 +67,17 @@
       @content
   }
 
-
   &--tomato {
       $backgroundColor: $colors-tomato !global;
       $fontColor: $colors-white !global;
       @content
   }
 
+  &--salmon {
+    $backgroundColor: $colors-salmon !global;
+    $fontColor: $colors-white !global;
+    @content
+  }
 
   &--blue {
       $backgroundColor: $colors-blue !global;
