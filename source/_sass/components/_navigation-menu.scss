@@ -1,0 +1,211 @@
+.navigation-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.navigation-overlay__bar-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.navigation-bar {
+    width: 100vh;
+    height: $menu-height;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: flex-end;
+
+    // responsible for putting the bar aside
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100%);
+
+    // responsible for adding margin to the menu options
+    padding-right: $menu-height * 2;
+
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    &__menu-option {
+        display: inline-block;
+        pointer-events: all;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
+        &--current {
+            background-color: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+        }
+
+        a {
+            display: block;
+            line-height: $menu-height;
+            padding: 0 32px;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @include breakpoint (64em 107em) {
+                padding: 0 32px;
+                font-size: 0.75em;
+                letter-spacing: 0.33px;
+            }
+
+            &:hover {
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}
+
+.navigation-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $colors-dark-blue;
+    padding-bottom: 32px;
+    pointer-events: all;
+    // transform: translateX(-50%);
+
+    @include breakpoint($touch) {
+        &__footer {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        padding-left: 148px;
+
+        @include breakpoint($small-only) {
+            padding-left: 90px;
+        }
+
+        &--blue {
+            background-color: $colors-light-dark-blue;
+        }
+    }
+
+    &__options {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: 1fr;
+        grid-gap: 16px 24px;
+
+        a {
+            color: $colors-white;
+        }
+
+        &-wrapper {
+            width: 50%;
+
+            @include breakpoint($small-only) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__section-title {
+        font-family: $fonts-strong;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 2em;
+        color: $colors-white;
+        margin-bottom: 32px;
+    }
+
+    &__section-content {
+        color: $colors-white;
+
+        &--columns {
+            display: flex;
+            flex-direction: row;
+
+            @include breakpoint($small-only) {
+                flex-direction: column;
+            }
+        }
+
+        &__column {
+            flex: 1;
+
+            & + & {
+                margin-left: 90px;
+            }
+
+            @include breakpoint($small-only) {
+                & + & {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint($large) {
+            flex-direction: row;
+        }
+        
+        &-left, &-right {
+            flex: 1;
+        }
+
+        &-right {
+            margin-top: 48px;
+
+            @include breakpoint ($large) {
+                margin-top: 0;
+            }
+        }
+
+        &-left {
+            padding-right: 90px;
+        }
+
+        &-right--hr {
+            padding: 0 60px 0 0;
+
+            @include breakpoint($large) {
+                border-left: 2px solid #0D3A57;
+                padding: 0 60px 0 90px;
+            }
+        }
+
+    }
+
+    &__brought-by {
+        padding-top: 90px;
+        padding-right: 128px;
+        text-align: right;
+        
+        &-title {
+            color: rgba($colors-white, 0.2);
+            text-transform: uppercase;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-top: 28px;
+            }
+        }
+    }
+}

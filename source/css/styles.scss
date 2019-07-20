@@ -61,6 +61,8 @@ $colors-pink: #E80D62;
 $transition-regular: cubic-bezier(0.4, 0.0, 0.2, 1);
 $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 
+$menu-height: 72px;
+
 @import 'base';
 @import 'main';
 
@@ -74,6 +76,9 @@ $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 @import 'components/input';
 @import 'components/card-list';
 @import 'components/voting';
+@import 'components/sections';
+@import 'components/navigation-menu';
+@import 'components/domain-level';
 
 @import 'custom';
 @import 'dev';

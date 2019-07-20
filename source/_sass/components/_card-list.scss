@@ -1,7 +1,6 @@
 .card-list {
     list-style: none;
     padding: 0;
-    z-index: 1;
 
     &__item {
         background-color: $colors-white;
@@ -83,5 +82,26 @@
             width: 132px;
             border-radius: 50%;
         }
+    }
+}
+
+.card-row {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(auto-fit, 320px);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+
+    .card-row__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $colors-white;
+        box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+        border-radius: 10px;
+        padding: 74px 54px;
     }
 }

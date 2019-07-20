@@ -1,0 +1,41 @@
+.domain-level-list, .domain-level {
+    list-style: none;
+    padding: 0;
+}
+
+.domain-level-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    @include breakpoint($large) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.domain-level {
+    width: 90px;
+    margin-left: 16px;
+
+    @include breakpoint($small-only) {
+        margin-left: 0;
+    }
+}
+
+.domain-level__title {
+    flex: 1;
+    font-size: 1.25em;
+}
+
+.domain-level__mark {
+    display: inline-block;
+    width: 12px;
+    height: 5px;
+    background-color: $colors-white;
+
+    &--marked {
+        background-color: $colors-deep-yellow;
+    }
+}

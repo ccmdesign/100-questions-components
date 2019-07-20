@@ -1,0 +1,17 @@
+.section-title {
+    padding: 40px 18px;
+    text-align: center;
+    
+    @include mixColors {
+        background-color: $backgroundColor;
+        color: $fontColor;
+    }
+
+    & + .app-body {
+        margin-top: -24px;
+    }
+    
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
