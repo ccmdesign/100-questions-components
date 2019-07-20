@@ -1,21 +1,48 @@
 .gauge {
   position: relative;
-  background-color: yellow;
+  overflow: hidden;
+
+  width: 620px;    // ARTHUR: Vamos precisar de setar as width e height para os diferentes devices. 
+  height: 310px;   //         Não estou conseguindo fazer isso ficar responsivo.
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
 
   &__circle {
     position: absolute;
-    bottom: 8px;
+    bottom: 0;
     left: 10%;
+    right: 10%;
     width: 80%;
     height: 80%;
     background-color: #FFF;
     border-radius: 1000px 1000px 0 0;
     box-shadow: 0 0 48px rgba(black, .4);
-
   }
 
-  &__titles {
+  &__titles { // ARTHUR: Se vc já tiver styles pra esses títulos, fique a vontade pra substituir aqui.
+    color: $colors-dark-blue;
+    max-width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10% auto;
+    height: 80%;
 
+    h2 {
+      font-weight: 800;
+      opacity: .2;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-weight: 600;
+      opacity: 1;
+      font-size: 40px;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -54,7 +81,6 @@
   }
 
   // ARTHUR: Por favor, substitui essas cores pelas cores certas da interface
-
   &--red { color: red; }
   &--green { color: green; }
   &--blue { color: blue; }
