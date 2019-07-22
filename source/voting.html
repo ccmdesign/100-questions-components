@@ -8,7 +8,7 @@ title: Voting
         <p class="header-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat dolorem asperiores, harum repudiandae deserunt velit, suscipit facilis neque soluta</p>
         <div class="header__image">
             <!-- <img src="" /> -->
-            <div class="missing-content" style="display: inline-block; width: 256px; height: 256px;"></div>
+            {% include _gauge.html %}
         </div>
     </header>
     <section class="section-title section-title--uppercase section-title--red-alt">
@@ -174,17 +174,17 @@ title: Voting
         <ul class="card-row">
             <li class="card-row__item">
                 <div class="img-wrapper d-inline-block">
-                    <img src="/images/govlab-logo.png" width="128" />
+                    <img src="/images/govlab-logo--ice.png" width="128" />
                 </div>
             </li>
             <li class="card-row__item">
                 <div class="img-wrapper d-inline-block">
-                    <img src="/images/schmidt-logo.png" width="228" />
+                    <img src="/images/schmidt-logo--ice.png" width="228" />
                 </div>
             </li>
             <li class="card-row__item">
                 <div class="img-wrapper d-inline-block">
-                    <img src="/images/nyu-logo.png" width="192" />
+                    <img src="/images/nyu-logo--ice.png" width="192" />
                 </div>
             </li>
         </ul>
@@ -192,23 +192,7 @@ title: Voting
 </div>
 
 <div class="app-body-highlight">
-    <section class="newsletter-section app-body">
-        <div class="newsletter-section__left">
-            <h2>
-                Lorem ipsum dolor sit
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laboriosam repellendus ipsa reprehenderit hic odit minima ad architecto quasi esse? Obcaecati omnis eligendi itaque fugit accusamus quod neque quae facere.
-            </p>
-        </div>
-        <div class="newsletter-section__right">
-            <form>
-                <input class="input input--block" id="name" type="text" placeholder="Name" />
-                <input class="input input--block" id="email" type="email" placeholder="E-mail" />
-                <div style="text-align: right;">
-                    <button class="button button--alt button--yellow button--block-on-touch">Subscribe</button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <div class="app-body">
+        {% include _newsletter-section.html %}
+    </div>
 </div>

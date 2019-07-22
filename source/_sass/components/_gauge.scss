@@ -96,10 +96,8 @@
     .gauge__phase-5 { fill: currentColor; }  
   }
 
-  // ARTHUR: Por favor, substitui essas cores pelas cores certas da interface
-  &--red { color: red; }
-  &--green { color: green; }
-  &--blue { color: blue; }
-  &--yellow { color: yellow; }
+  @include mixColors {
+    color: $backgroundColor;
+  }
 }
 
