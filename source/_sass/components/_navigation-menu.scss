@@ -67,7 +67,7 @@
     width: 100vh;
     height: $menu-height;
     background-color: rgba(0, 0, 0, 0.05);
-    display: flex;
+    display: none;
     justify-content: flex-end;
 
     // responsible for putting the bar aside
@@ -76,6 +76,10 @@
 
     // responsible for adding margin to the menu options
     padding-right: $menu-height * 2;
+
+    @include breakpoint($large) {
+        display: flex;
+    }
 
     &__menu {
         list-style: none;

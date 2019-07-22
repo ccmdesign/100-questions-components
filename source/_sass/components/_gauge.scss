@@ -1,0 +1,105 @@
+.gauge {
+  position: relative;
+  overflow: hidden;
+
+  &__svg-wrapper {
+    position: relative; 
+    height: 0; 
+    width: 620px;
+    max-width: 100%;
+    padding: 0 0 50% 0; 
+  }
+
+  &__svg {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
+  }
+
+  &__circle {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #FFF;
+    border-radius: 1000px 1000px 0 0;
+    box-shadow: 0 0 48px rgba(black, .4);
+  }
+
+  &__titles { // ARTHUR: Se vc já tiver styles pra esses títulos, fique a vontade pra substituir aqui.
+    color: $colors-dark-blue;
+    max-width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10% auto;
+    height: 80%;
+
+    h2 {
+      font-weight: 800;
+      opacity: .2;
+      font-size: 1.75em;
+      margin-bottom: 16px;
+
+      @include breakpoint($small-only) {
+        font-size: 1.125em;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      opacity: 1;
+      font-size: 2.5em;
+      line-height: 1.2;
+
+      @include breakpoint($small-only) {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+
+.gauge {
+  &__phase { fill: rgba(white, .2); }
+
+  &--phase-1 {
+    .gauge__phase-1 { fill: currentColor; }  
+  }
+
+  &--phase-2 {
+    .gauge__phase-1,
+    .gauge__phase-2 { fill: currentColor; }  
+  }
+
+  &--phase-3 {
+    .gauge__phase-1,
+    .gauge__phase-2,
+    .gauge__phase-3 { fill: currentColor; }  
+  }
+
+  &--phase-4 {
+    .gauge__phase-1,
+    .gauge__phase-2,
+    .gauge__phase-3,
+    .gauge__phase-4 { fill: currentColor; }  
+  }
+
+  &--phase-5 {
+    .gauge__phase-1,
+    .gauge__phase-2,
+    .gauge__phase-3,
+    .gauge__phase-4,
+    .gauge__phase-5 { fill: currentColor; }  
+  }
+
+  // ARTHUR: Por favor, substitui essas cores pelas cores certas da interface
+  &--red { color: red; }
+  &--green { color: green; }
+  &--blue { color: blue; }
+  &--yellow { color: yellow; }
+}
+
