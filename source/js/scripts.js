@@ -1,4 +1,6 @@
 $(document).ready(() => {
+  const bodyEl = $(document.body)
+
   $('.navigation-overlay__menu-button').click(function () {
     const el = $(this).children('.navigation-overlay__menu-icon')
     const openMenuIcon = el.children('.navigation-overlay__menu-open')
@@ -55,4 +57,58 @@ $(document).ready(() => {
         }
       })
   })
+
+  const modalHandler = {
+    modalOverlayEl: $('.modal-overlay'),
+    modalWindowEl: $('.modal-window'),
+    modalWindowContentEl: $('.modal-window__content'),
+    open: function (modalId) {
+      if (!modalId) {
+        console.error('You must specify a "modalId" before opening a modal.')
+        return
+      }
+      const modalContent = $(`.modal[data-modal-id="${modalId}"`)
+      if (!modalContent || modalContent.length === 0) {
+        console.error('Modal not found: ', modalId)
+        return
+      }
+      modalContent.children().clone().appendTo(this.modalWindowContentEl)
+      this.modalOverlayEl.addClass('visible')
+      this.modalWindowEl.addClass('open')
+      bodyEl.css('overflow', 'hidden')
+    },
+    close: function (immediate) {
+      const overlayEl = this.modalOverlayEl
+      if (immediate) {
+        overlayEl.css('transition', 'none')
+        overlayEl.removeClass('visible')
+      } else {
+        overlayEl.css('transition', 'opacity 0.13s cubic-bezier(0.4, 0.0, 0.2, 1)')
+        overlayEl.removeClass('visible')
+      }
+      this.modalWindowEl.removeClass('open')
+      this.modalWindowContentEl.empty()
+      bodyEl.css('overflow', 'auto')
+    }
+  }
+
+  $('[data-modal-target]').each(function () {
+    const openModalButton = $(this)
+    const modalId = openModalButton.attr('data-modal-target')
+    openModalButton.click(function () {
+      modalHandler.open(modalId)
+    })
+  })
+
+  $('.modal-overlay').click(function (el) {
+    const target = $(el.target)
+    if(target.hasClass('modal-overlay')) {
+      modalHandler.close(true)
+    }
+  })
+
+  $('.modal-window__close').click(function () {
+    modalHandler.close()
+  })
+
 })
