@@ -10,6 +10,10 @@
     color: $colors-dark;
     transition: background-color 0.13s $transition-regular;
 
+    @include breakpoint($small-only) {
+        padding: 16px 64px 18px 64px;
+    }
+
     &--small {
         padding: 16px 48px 18px 48px;
     }

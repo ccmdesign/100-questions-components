@@ -1,0 +1,107 @@
+.domain-card-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-row-gap: 32px;
+
+    @include breakpoint($large) {
+        grid-template-columns: repeat(2, calc(50% - 10px));
+        grid-auto-rows: 1fr;
+        grid-column-gap: 20px;
+    }
+}
+
+.domain-card {
+    display: flex;
+    flex-direction: row;
+    background-color: $colors-dark-blue;
+    color: $colors-white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(#37559C, 0.35);
+
+    &--left-columns-borders {
+        @include breakpoint($large) {
+            border-radius: 15px 0 0 15px;
+        }
+    }
+
+    &--right-columns-borders {
+        @include breakpoint($large) {
+            border-radius: 0 15px 15px 0;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 0 64px 48px;
+
+        h2 {
+            font-size: 2em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            line-height: 1;
+            color: rgba($colors-white, 0.4);
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 24px 0 0 0;
+        }
+
+    }
+
+    &__domain {
+        padding: 0 0 32px 0;
+    }
+
+    &__gauge-wrapper {
+        flex: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button-wrapper {
+        text-align: center;
+    }
+
+    @include mixColors {
+        background-color: $backgroundColor;
+        color: $fontColor;
+
+        .domain-card__content h3 {
+            color: rgba($fontColor, 0.4);
+        }
+    }
+
+    & + &__button-wrapper {
+        margin-top: -30px;
+    }
+}
+
+
+.domain-card-partner-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        background-color: $colors-white;
+        padding: 16px 12px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+        color: $colors-default;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+}
