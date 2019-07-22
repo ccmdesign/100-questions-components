@@ -1,4 +1,26 @@
 $(document).ready(() => {
+  $('.navigation-overlay__menu-button').click(function () {
+    const el = $(this).children('.navigation-overlay__menu-icon')
+    const openMenuIcon = el.children('.navigation-overlay__menu-open')
+    const closeMenuIcon = el.children('.navigation-overlay__menu-close')
+    const navigationMenu = $('.navigation-menu')
+    const body = $(document.body)
+    const overlayBackground = $('.navigation-overlay__background')
+    if (openMenuIcon.hasClass('active')) {
+      closeMenuIcon.addClass('active')
+      openMenuIcon.removeClass('active')
+      navigationMenu.addClass('navigation-menu--active')
+      body.css('overflow', 'hidden')
+      overlayBackground.addClass('active')
+    } else {
+      openMenuIcon.addClass('active')
+      closeMenuIcon.removeClass('active')
+      navigationMenu.removeClass('navigation-menu--active')
+      body.css('overflow', 'auto')
+      overlayBackground.removeClass('active')
+    }
+  })
+
   $('.accordion').each(function () {
       const accordion = $(this)
       const onlyOneOpen = accordion.hasClass('accordion--only-one') // if an accordion has also the class "accordion--only-one", it will open one item at a time

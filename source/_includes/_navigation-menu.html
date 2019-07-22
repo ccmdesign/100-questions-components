@@ -1,4 +1,5 @@
 <div class="navigation-overlay">
+    <div class="navigation-overlay__background" aria-hidden="true"></div>
     <div class="navigation-menu">
         <div class="navigation-menu__wrapper" style="margin-top: 90px;">
             <div class="navigation-menu__navigation" style="padding: 64px 0 90px 0;">
@@ -91,6 +92,12 @@
         </div>
     </div>
     <div class="navigation-overlay__bar-wrapper">
+        <button class="navigation-overlay__menu-button">
+            <div class="navigation-overlay__menu-icon">
+                <img class="navigation-overlay__menu-open active" src="/images/menu-closed.svg" aria-label="Open navigation menu" />
+                <img class="navigation-overlay__menu-close" src="/images/menu-open.svg" aria-label="Close navigation menu" />
+            </div>
+        </button>
         <div class="navigation-bar">
             <ul class="navigation-bar__menu">
                 <li class="navigation-bar__menu-option"><a href="#">Join us</a></li>
