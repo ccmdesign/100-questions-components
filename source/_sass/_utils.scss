@@ -6,9 +6,12 @@
 .clear-divider {
     border: 0;
     height: 48px;
+    background: none;
 }
 
-.img-wrapper { img { max-width: 100%} }
+.d-inline-block { display: inline-block; }
+
+.img-wrapper { img { max-width: 100%; } }
 
 .missing-content { outline: 2px solid red; }
 
@@ -20,6 +23,30 @@
 }
 
 @mixin mixColors {
+  &--white {
+      $backgroundColor: $colors-white !global;
+      $fontColor: $colors-default !global;
+      @content
+  }
+
+  &--white-alt {
+      $backgroundColor: $colors-white-alt !global;
+      $fontColor: $colors-dark !global;
+      @content
+  }
+
+  &--green {
+      $backgroundColor: $colors-green !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
+  &--bright-green-alt {
+      $backgroundColor: $colors-bright-green-alt !global;
+      $fontColor: $colors-white !global;
+      @content
+  }
+
   &--pink {
       $backgroundColor: $colors-pink !global;
       $fontColor: $colors-white !global;

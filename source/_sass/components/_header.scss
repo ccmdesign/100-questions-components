@@ -5,10 +5,18 @@
     flex-direction: column;
     background-color: $colors-dark-blue;
     padding: 40px 20px;
-    min-height: 60vh;
-    max-height: 650px;
+    height: 90vh;
+    max-height: 768px;
+
+    @include breakpoint($small-only) {
+        height: auto;
+        min-height: 90vh;
+        max-height: auto;
+    }
 
     @include breakpoint($large) {
+        height: auto;
+        max-height: 768px;
         padding: 170px 0;
     }
 
@@ -84,21 +92,6 @@
             max-width: 100%;
             margin: 0 20px;
         }
-    }
-
-    & + .app-body {
-        margin-top: -24px;
-    }
-}
-
-.section-title {
-    padding: 40px 18px;
-    text-align: center;
-    text-transform: uppercase;
-    
-    @include mixColors {
-        background-color: $backgroundColor;
-        color: $fontColor;
     }
 
     & + .app-body {

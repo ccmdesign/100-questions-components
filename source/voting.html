@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FAQ
+title: Voting
 ---
 <div class="app-body-wrapper">
     <header class="header header--domain header--red-alt header__red-background">
@@ -8,10 +8,10 @@ title: FAQ
         <p class="header-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat dolorem asperiores, harum repudiandae deserunt velit, suscipit facilis neque soluta</p>
         <div class="header__image">
             <!-- <img src="" /> -->
-            <div class="missing-content" style="display: inline-block; width: 256px; height: 256px;"></div>
+            {% include _gauge.html %}
         </div>
     </header>
-    <section class="section-title section-title--red-alt">
+    <section class="section-title section-title--uppercase section-title--red-alt">
         <h2>Questions</h2>
     </section>
     <main class="app-body">
@@ -55,8 +55,13 @@ title: FAQ
             </li>
             <li class="card-list__item card-list__item--columns">
                 <div class="card-list__item__left">
-                    <div class="card-list__portrait">
-                        <img src="https://randomuser.me/api/portraits/women/42.jpg" />
+                    <div class="voting-wrapper">
+                        <button class="voting-button">
+                            <object data="/images/angle-up.svg" type="image/svg+xml">
+                                <img src="/images/angle-up.svg" />
+                            </object>
+                        </button>
+                        <p class="voting-votes voting-votes--red-alt">3</p>
                     </div>
                 </div>
                 <div class="card-list__item__right">
@@ -69,8 +74,13 @@ title: FAQ
             </li>
             <li class="card-list__item card-list__item--columns">
                 <div class="card-list__item__left">
-                    <div class="card-list__portrait">
-                        <img src="https://randomuser.me/api/portraits/women/42.jpg" />
+                    <div class="voting-wrapper">
+                        <button class="voting-button">
+                            <object data="/images/angle-up.svg" type="image/svg+xml">
+                                <img src="/images/angle-up.svg" />
+                            </object>
+                        </button>
+                        <p class="voting-votes voting-votes--red-alt">3</p>
                     </div>
                 </div>
                 <div class="card-list__item__right">
@@ -83,26 +93,106 @@ title: FAQ
             </li>
         </ul>
     </main>
+    <section class="app-body app-body--large">
+        <h3 class="section-title">Bilinguals</h3>
+        <ul class="profile-cards">
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+            <li class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+                <h4>Bilingual Name</h4>
+                <h5>Bilingual Job Title</h5>
+                <h5>Organization Bilingual</h5>
+            </li>
+        </ul>
+        <hr />
+        <h3 class="section-title">Partners</h3>
+        <ul class="card-row">
+            <li class="card-row__item">
+                <div class="img-wrapper d-inline-block">
+                    <img src="/images/govlab-logo--ice.png" width="128" />
+                </div>
+            </li>
+            <li class="card-row__item">
+                <div class="img-wrapper d-inline-block">
+                    <img src="/images/schmidt-logo--ice.png" width="228" />
+                </div>
+            </li>
+            <li class="card-row__item">
+                <div class="img-wrapper d-inline-block">
+                    <img src="/images/nyu-logo--ice.png" width="192" />
+                </div>
+            </li>
+        </ul>
+    </section>
 </div>
 
 <div class="app-body-highlight">
-    <section class="newsletter-section app-body">
-        <div class="newsletter-section__left">
-            <h2>
-                Lorem ipsum dolor sit
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laboriosam repellendus ipsa reprehenderit hic odit minima ad architecto quasi esse? Obcaecati omnis eligendi itaque fugit accusamus quod neque quae facere.
-            </p>
-        </div>
-        <div class="newsletter-section__right">
-            <form>
-                <input class="input input--block" id="name" type="text" placeholder="Name" />
-                <input class="input input--block" id="email" type="email" placeholder="E-mail" />
-                <div style="text-align: right;">
-                    <button class="button button--alt button--yellow button--block-on-touch">Subscribe</button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <div class="app-body">
+        {% include _newsletter-section.html %}
+    </div>
 </div>

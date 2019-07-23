@@ -58,8 +58,15 @@ $colors-red-alt-2: #EB3B3B;
 $colors-tomato: #DB4C2E;
 $colors-pink: #E80D62;
 
+$overlay-color: rgba(0, 0, 0, 0.5);
+
 $transition-regular: cubic-bezier(0.4, 0.0, 0.2, 1);
 $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
+
+$zi-menu: 100;
+$zi-modal: 101;
+
+$menu-height: 72px;
 
 @import 'base';
 @import 'main';
@@ -74,7 +81,13 @@ $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 @import 'components/input';
 @import 'components/card-list';
 @import 'components/voting';
+@import 'components/sections';
+@import 'components/navigation-menu';
+@import 'components/domain-level';
 @import 'components/gauge';
+@import 'components/domain-card';
+@import 'components/side-gauge';
+@import 'components/modal';
 
 @import 'custom';
 @import 'dev';

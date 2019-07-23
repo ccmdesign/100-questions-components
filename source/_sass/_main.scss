@@ -27,3 +27,10 @@
     background-color: $colors-dark-blue;
   }
 }
+
+hr {
+  margin: 64px 0 12px 0;
+  height: 1px;
+  border: 0;
+  background-color: rgba($colors-dark-blue, 0.1);
+}

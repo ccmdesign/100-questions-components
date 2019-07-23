@@ -2,12 +2,20 @@
   position: relative;
   overflow: hidden;
 
-  width: 620px;    // ARTHUR: Vamos precisar de setar as width e height para os diferentes devices. 
-  height: 310px;   //         Não estou conseguindo fazer isso ficar responsivo.
+  &__svg-wrapper {
+    position: relative; 
+    height: 0; 
+    width: 620px;
+    max-width: 100%;
+    padding: 0 0 50% 0; 
+  }
 
-  > svg {
-    width: 100%;
-    height: 100%;
+  &__svg {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
   }
 
   &__circle {
@@ -22,7 +30,7 @@
     box-shadow: 0 0 48px rgba(black, .4);
   }
 
-  &__titles { // ARTHUR: Se vc já tiver styles pra esses títulos, fique a vontade pra substituir aqui.
+  &__titles {
     color: $colors-dark-blue;
     max-width: 80%;
     text-align: center;
@@ -33,15 +41,23 @@
     h2 {
       font-weight: 800;
       opacity: .2;
-      font-size: 28px;
+      font-size: 1.75em;
       margin-bottom: 16px;
+
+      @include breakpoint($small-only) {
+        font-size: 1.125em;
+      }
     }
 
     h3 {
       font-weight: 600;
       opacity: 1;
-      font-size: 40px;
+      font-size: 2.5em;
       line-height: 1.2;
+
+      @include breakpoint($small-only) {
+        font-size: 1.5em;
+      }
     }
   }
 }
@@ -80,10 +96,8 @@
     .gauge__phase-5 { fill: currentColor; }  
   }
 
-  // ARTHUR: Por favor, substitui essas cores pelas cores certas da interface
-  &--red { color: red; }
-  &--green { color: green; }
-  &--blue { color: blue; }
-  &--yellow { color: yellow; }
+  @include mixColors {
+    color: $backgroundColor;
+  }
 }
 

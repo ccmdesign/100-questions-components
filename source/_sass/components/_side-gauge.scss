@@ -1,0 +1,73 @@
+.side-gauge {
+  position: relative;
+  overflow: hidden;
+
+  &__svg-wrapper {
+    position: relative; 
+    height: 0; 
+    width: 192px;
+    max-width: 100%;
+    padding: 0 0 160% 0;
+
+    @include breakpoint($small-only) {
+      width: 96px;
+    }
+  }
+
+  &__svg {
+    position: absolute; 
+    height: 100%; 
+    width: 160%;
+    left: -20%; 
+    top: 0;
+    transform: rotate(-90deg);
+  }
+
+  &__circle {
+    position: absolute;
+    left: 37.5%;
+    top: 10%;
+    bottom: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #FFF;
+    border-radius: 1000px 0 0 1000px;
+    box-shadow: 0 0 48px rgba(black, .4);
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $colors-dark-blue;
+    max-width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 10%;
+    margin: 10% auto 10% 0;
+    height: 80%;
+
+    h2 {
+      font-weight: 800;
+      opacity: .2;
+      font-size: 1.125em;
+      margin: 32px 0 0 0;
+      line-height: 1;
+
+      @include breakpoint($small-only) {
+        font-size: 0.75em;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      opacity: 1;
+      font-size: 4em;
+      line-height: 1;
+
+      @include breakpoint($small-only) {
+        font-size: 2em;
+      }
+    }
+  }
+}

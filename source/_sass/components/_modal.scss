@@ -1,0 +1,224 @@
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    z-index: $zi-modal;
+    padding: 64px 20px;
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.33s $transition-regular !important;
+    pointer-events: none;
+
+    @include breakpoint($large) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.modal-window {
+    position: relative;
+    background-color: $colors-white;
+    padding: 64px;
+    box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+    width: $app-body-regular;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    border-radius: 10px;
+    transform: scale(0.9);
+    transition: transform 0.33s $transition-bounce;
+    margin-bottom: 64px;
+
+    @include breakpoint($small-only) {
+        padding: 32px;
+    }
+
+    &.open {
+        opacity: 1;
+        transform: none;
+        transition: transform 0.33s $transition-bounce, opacity 0.13s;
+    }
+
+    &.open &__close {
+        opacity: 1;
+        transform: none;
+        transition: transform 0.23s $transition-bounce, opacity 0.13s;
+        transition-delay: 0.13s;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 58%;
+        height: 8px;
+        top: 0;
+        left: 64px;
+        background-color: $colors-cyan;
+
+        @include breakpoint($small-only) {
+            width: calc(100% - 192px);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: -24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+        background: $colors-white;
+        border: 0;
+        border-radius: 50%;
+        box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+        cursor: pointer;
+        opacity: 0;
+        transform: scale(0.5);
+        transition: transform 0.55s $transition-bounce;
+
+        &:hover {
+            background-color: #e9f1f8;
+        }
+    }
+}
+
+.modal {
+    display: none;
+
+    &__separator {
+        margin: 24px 0 48px 0;
+    }
+
+    &__highlight-text {
+        font-size: 1.125em;
+        color: $colors-blue;
+        font-weight: bolder;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint($large) {
+            flex-direction: row;
+        }
+
+        &-aside {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            text-align: center;
+
+            @include breakpoint($large) {
+                flex: 0;
+                margin-right: 64px;
+            }
+        }
+
+        &-content {
+            flex: 1;
+
+            hgroup {
+                margin: 0 0 48px;
+                text-align: center;
+
+                @include breakpoint($large) {
+                    text-align: left;
+                }
+            }
+
+            h2 {
+                color: $colors-dark;
+            }
+
+            h3 {
+                font-size: 0.875em;
+                color: $colors-purple;
+                margin: 0;
+            }
+        }
+
+        &-portrait {
+            width: 144px;
+            border-radius: 50%;
+            margin: 0 auto;
+
+            &-title {
+                font-size: 1.125em;
+                color: $colors-blue;
+                text-transform: uppercase;
+                font-weight: bolder;
+                padding: 0 8px;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 32px;
+
+        @include breakpoint($large) {
+            flex-direction: row;
+        }
+
+        &-image {
+            flex: 1;
+            text-align: center;
+            margin: 0 0 32px 0;
+
+            img {
+                border-radius: 50%;
+                width: 128px;
+                margin: 0 auto;
+
+                @include breakpoint($large) {
+                    width: 80px;
+                }
+            }
+
+            @include breakpoint($large) {
+                flex: 0;
+                margin: 0 32px 0 0;
+            }
+        }
+
+        &-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            @include breakpoint($large) {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            h2 {
+                color: $colors-blue;
+                font-size: 1.125em;
+                margin: 0;
+            }
+
+            h3 {
+                color: $colors-purple;
+                font-size: 0.875em;
+                margin: 0;
+            }
+            
+        }
+    }
+}

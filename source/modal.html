@@ -1,0 +1,81 @@
+---
+layout: default
+title: Domain list
+---
+<div class="app-body-wrapper">
+    <header class="header">
+        <h1 class="header-title">Modal</h1>
+        <p class="header-text">Click the button to open a modal</p>
+    </header>
+    <hr class="clear-divider" />
+    <main class="app-body">
+        <button class="button button--blue" data-modal-target="portrait-modal">Open modal with card</button>
+        <hr class="clear-divider" />
+        <button class="button button--blue" data-modal-target="footer-modal">Open modal with footer</button>
+    </main>
+    <hr class="clear-divider" />
+</div>
+
+<div class="app-body-highlight">
+    <section class="newsletter-section app-body">
+        <div class="newsletter-section__left">
+            <h2>
+                Lorem ipsum dolor sit
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laboriosam repellendus ipsa reprehenderit hic odit minima ad architecto quasi esse? Obcaecati omnis eligendi itaque fugit accusamus quod neque quae facere.
+            </p>
+        </div>
+        <div class="newsletter-section__right">
+            <form>
+                <input class="input input--block" id="name" type="text" placeholder="Name" />
+                <input class="input input--block" id="email" type="email" placeholder="E-mail" />
+                <div style="text-align: right;">
+                    <button class="button button--alt button--yellow button--block-on-touch">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<div aria-hidden="true">
+        <div class="modal" data-modal-id="portrait-modal">
+            <div class="modal__card">
+                <aside class="modal__card-aside">
+                    <img class="modal__card-portrait" src="https://randomuser.me/api/portraits/women/74.jpg" />
+                    <div style="margin-top: 32px;">
+                        <p class="modal__card-portrait-title">Health gender</p>
+                    </div>
+                </aside>
+                <div class="modal__card-content">
+                    <hgroup>
+                        <h2>Bilingual name</h2>
+                        <h3>Bilingual Job Title</h3>
+                        <h3>Bilingual Organization</h3>
+                    </hgroup>
+
+                    <p class="modal__highlight-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officia harum repudiandae dignissimos perspiciatis laborum officiis, repellat omnis numquam! Natus commodi quibusdam unde, vitae iusto cupiditate assumenda est officiis. Alias! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et velit excepturi debitis, similique laudantium voluptates eius illo ab voluptatem dolor itaque ipsam soluta natus omnis eum laborum optio nesciunt officiis.
+                    </p>
+                </div>
+            </div>
+            <hr class="modal__separator" />
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore, accusamus voluptatem quas quo quos magnam vel, est tempora deleniti pariatur quisquam cupiditate quia rerum consequuntur autem quidem? Hic, fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, molestias aliquam voluptate rem adipisci dolorum tempora, ea a officiis alias hic veniam odio beatae pariatur fugiat quia voluptatibus, provident velit!
+            </p>
+        </div>
+        <div class="modal" data-modal-id="footer-modal">
+            <p class="modal__highlight-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque labore cumque, minus veniam magni assumenda, repellat ea neque hic numquam nisi autem optio laudantium ad quidem laboriosam nam. Possimus, atque!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus reiciendis, deleniti iusto tenetur consectetur sapiente possimus libero suscipit rem quos eius fugiat quidem cumque assumenda voluptatem aperiam amet similique fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut natus illum, eligendi voluptates corporis nam tempora magnam ab eaque doloribus, tenetur neque quod a eveniet quis, ipsum nostrum. Dicta!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maxime fuga in vero fugiat itaque, veritatis impedit ab illo labore sequi deserunt unde ut? Magnam laudantium quos maxime optio sequi!</p>
+            <div class="modal__footer">
+                <div class="modal__footer-image">
+                    <img src="https://randomuser.me/api/portraits/women/74.jpg" />
+                </div>
+                <div class="modal__footer-text">
+                    <h2>Bilingual Name</h2>
+                    <h3>Bilingual Job Title</h3>
+                </div>
+            </div>
+        </div>
+</div>
