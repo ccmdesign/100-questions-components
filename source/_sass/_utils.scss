@@ -122,13 +122,13 @@
 
   &--yellow-alt {
       $backgroundColor: $colors-yellow-alt !global;
-      $fontColor: $colors-white !global;
+      $fontColor: $colors-dark !global;
       @content
   }
 
   &--yellow {
       $backgroundColor: $colors-yellow !global;
-      $fontColor: $colors-white !global;
+      $fontColor: $colors-dark !global;
       @content
   }
 }
