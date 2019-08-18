@@ -1,0 +1,9 @@
+.testimonials {
+    .VueCarousel-dot {
+        background-color: $colors-white-alt !important;
+    }
+
+    .VueCarousel-dot--active {
+        background-color: $colors-blue !important;
+    }
+}

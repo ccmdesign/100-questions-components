@@ -1,3 +1,23 @@
+.quote-card-out {
+    background-color: $colors-white;
+    box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+    border-radius: 10px;
+    padding: 64px 64px 48px 64px;
+
+    @include breakpoint($large) {
+        padding: 64px 16.67% 48px 16.67%;
+    }
+}
+
+.quote-card-in {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($large) {
+        flex-direction: row;
+    }
+}
+
 .quote-card {
     display: flex;
     flex-direction: column;

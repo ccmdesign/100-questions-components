@@ -1,0 +1,116 @@
+---
+layout: default
+title: Boilerplate
+---
+<div class="app-body-wrapper">
+    <header class="header">
+        <h1 class="header-title">Vue components</h1>
+        <p class="header-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut maiores possimus commodi animi, suscipit repellat ad blanditiis voluptas fugit quasi atque vitae esse odio recusandae hic nemo asperiores? Repellendus, debitis.</p>
+    </header>
+
+    <div class="in-the-news-wrapper">
+        <div class="in-the-news">
+            <h3 class="in-the-news__title">In the <strong>news</strong></h3>
+            <div class="in-the-news__showcase">
+                <carousel :autoplay="true" :per-page="4" :scroll-per-page="false" :pagination-enabled="false" :navigation-enabled="true">
+                    <slide v-for="(item, index) in items" :key="index">
+                        <a :href="item.url" target="_blank" rel="noopener">
+                            <img :src="item.img" width="132" />
+                        </a>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-body app-body--large">
+        <div class="testimonials quote-card-out">
+            <carousel :autoplay="false" :per-page="1">
+                <slide v-for="(item, index) in items" :key="index">
+                    <div class="quote-card-in">
+                        <div class="quote-card__portrait">
+                            <img src="https://randomuser.me/api/portraits/women/6.jpg" />
+                        </div>
+                        <div class="quote-card__content">
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laudantium, id at reiciendis quos placeat sequi repudiandae itaque? Maiores aliquam ducimus, repudiandae animi modi natus reprehenderit nemo atque quos vitae.
+                                </p>
+                            </div>
+                            <div>
+                                <h4>Lorem Ipsum</h4>
+                                <h5>Scientific Director ISI Foundation</h5>
+                            </div>
+                        </div>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+</div>
+
+<div class="app-body-highlight">
+    <div class="app-body">
+        {% include _newsletter-section.html %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-carousel@0.18.0/dist/vue-carousel.min.js"></script>
+
+<script>
+Vue.use(VueCarousel)
+const inTheNews = new Vue({
+    el: '.in-the-news__showcase',
+    components: { carousel: VueCarousel.Carousel, slide: VueCarousel.Slide },
+    data: {
+        items: [
+            {
+                url: '#',
+                img: '/images/logos/forbes.png'
+            },
+            {
+                url: '#',
+                img: '/images/logos/forbes.png'
+            },
+            {
+                url: '#',
+                img: '/images/logos/forbes.png'
+            },
+            {
+                url: '#',
+                img: '/images/logos/forbes.png'
+            },
+            {
+                url: '#',
+                img: '/images/logos/forbes.png'
+            }
+        ]
+    }
+})
+
+const testimonials = new Vue({
+    el: '.testimonials',
+    components: { carousel: VueCarousel.Carousel, slide: VueCarousel.Slide },
+    data: {
+        items: [
+            {
+                person: {
+                    img: 'https://randomuser.me/api/portraits/women/6.jpg',
+                    name: 'Lorem ipsum',
+                    position: 'Scientific Director ISI Foundation'
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            },
+            {
+                person: {
+                    img: 'https://randomuser.me/api/portraits/men/6.jpg',
+                    name: 'Lorem ipsum',
+                    position: 'Scientific Director ISI Foundation'
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            }
+        ]
+    }
+})
+</script>
