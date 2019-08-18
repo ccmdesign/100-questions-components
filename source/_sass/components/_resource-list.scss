@@ -1,0 +1,33 @@
+.resource-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    max-width: $app-body-large;
+    grid-gap: 16px;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $colors-white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba($colors-ice, 0.25);
+    padding: 24px 32px;
+
+    h3 {
+        color: $colors-blue;
+        margin: 0;
+        font-size: 1.125em;
+        line-height: 1.25;
+    }
+
+    h4 {
+        color: $colors-purple;
+        margin: 1em 0 0;
+        font-weight: 500;
+    }
+}
