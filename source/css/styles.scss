@@ -47,6 +47,7 @@ $colors-yellow: #FFCD13;
 $colors-yellow-alt: #EBBF1A;
 $colors-deep-yellow: #E5A50F;
 $colors-dark-yellow: #E0B207;
+$colors-true-yellow: #F7A700;
 $colors-salmon: #FA5E3D;
 $colors-bright-green: #9FD378;
 $colors-bright-green-alt: #8EBE6B;
@@ -63,8 +64,10 @@ $overlay-color: rgba(0, 0, 0, 0.5);
 $transition-regular: cubic-bezier(0.4, 0.0, 0.2, 1);
 $transition-bounce: cubic-bezier(0.25, 1.43, 0.35, 1.69);
 
-$zi-menu: 100;
-$zi-modal: 101;
+$zi-cookies: 100;
+$zi-menu: 101;
+$zi-modal: 102;
+
 
 $menu-height: 72px;
 
@@ -88,6 +91,7 @@ $menu-height: 72px;
 @import 'components/domain-card';
 @import 'components/side-gauge';
 @import 'components/modal';
+@import 'components/cookies';
 
 @import 'custom';
 @import 'dev';
