@@ -7,6 +7,30 @@
     @include breakpoint($large) {
         padding: 64px 16.67% 48px 16.67%;
     }
+
+    .VueCarousel {
+        position: relative;
+
+        &::before {
+            font-family: Georgia, serif;
+            position: absolute;
+            content: '\201C';
+            color: rgba($colors-dark-blue, 0.1);
+            font-size: 5em;
+            top: 224px;
+            left: -52px;
+            font-weight: bolder;
+    
+            @include breakpoint($large) {
+                top: -72px;
+                left: 224px;
+            }
+        }
+
+        .quote-card__content p::before {
+            display: none;
+        }
+    }
 }
 
 .quote-card-in {
