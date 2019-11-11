@@ -20,12 +20,8 @@ title: Voting
                 <div class="card-list__item--columns">
                     <div class="card-list__item__left">
                         <div class="voting-wrapper">
-                            <button class="voting-button">
-                                <object data="/images/angle-up.svg" type="image/svg+xml">
-                                    <img src="/images/angle-up.svg" />
-                                </object>
-                            </button>
                             <p class="voting-votes voting-votes--red-alt">3</p>
+                            <button class="voting-button">Vote</button>
                         </div>
                     </div>
                     <div class="card-list__item__right">
@@ -53,44 +49,10 @@ title: Voting
                     </div>
                 </div>
             </li>
-            <li class="card-list__item card-list__item--columns">
-                <div class="card-list__item__left">
-                    <div class="voting-wrapper">
-                        <button class="voting-button">
-                            <object data="/images/angle-up.svg" type="image/svg+xml">
-                                <img src="/images/angle-up.svg" />
-                            </object>
-                        </button>
-                        <p class="voting-votes voting-votes--red-alt">3</p>
-                    </div>
-                </div>
-                <div class="card-list__item__right">
-                    <h3 class="card-list__title card-list__title--red">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illum unde enim, obcaecati eaque</h3>
-                    <p class="card-list__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae optio excepturi cum voluptates, beatae deleniti porro ex, distinctio, esse voluptatibus tempore minus impedit aut pariatur sunt minima consectetur vitae consequuntur!
-                    </p>
-                    <h4 class="card-list__footer-line">Bilingual Name</h4>
-                </div>
-            </li>
-            <li class="card-list__item card-list__item--columns">
-                <div class="card-list__item__left">
-                    <div class="voting-wrapper">
-                        <button class="voting-button">
-                            <object data="/images/angle-up.svg" type="image/svg+xml">
-                                <img src="/images/angle-up.svg" />
-                            </object>
-                        </button>
-                        <p class="voting-votes voting-votes--red-alt">3</p>
-                    </div>
-                </div>
-                <div class="card-list__item__right">
-                    <h3 class="card-list__title card-list__title--red">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illum unde enim, obcaecati eaque</h3>
-                    <p class="card-list__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae optio excepturi cum voluptates, beatae deleniti porro ex, distinctio, esse voluptatibus tempore minus impedit aut pariatur sunt minima consectetur vitae consequuntur!
-                    </p>
-                    <h4 class="card-list__footer-line">Bilingual Name</h4>
-                </div>
-            </li>
+
+            {% for i in (1..5) %}
+            {% include _question-card-2.html %}
+            {% endfor %}
         </ul>
     </main>
     <section class="app-body app-body--large">
