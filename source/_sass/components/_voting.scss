@@ -3,36 +3,46 @@
 }
 
 .voting-button {
-    display: block;
-    text-align: center;
-    background: none;
-    border: 0;
-    cursor: pointer;
+  text-transform: uppercase;
+  padding: 13px 18px 13px;
+  border: 0;
+  cursor: pointer;
+  background-color: $colors-red-alt;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  transition: all .6 ease-in;
+
+  @include breakpoint($small-only) {
     width: 100%;
-    padding: 16px 0;
-    transition: transform 0.13s $transition-regular;
+  }
+
+  @include breakpoint($large) {
+    & + & { margin-left: 16px; }
+  }
+
+  &--disabled { 
+    background-color: rgba(black, .1); 
+    pointer-events: none;
+  }
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
 
     @include breakpoint($large) {
-        width: auto;
-        padding: 0 32px;
+      margin-left: -140px !important;
     }
-
-    &:active {
-        transform: scale(0.98);
-    }
-
-    object, img {
-        display: inline-block;
-        pointer-events: none;
-    }
+  }
 }
 
 .voting-votes {
-    text-align: center;
-    font-size: 4em;
-    line-height: 1;
+  text-align: center;
+  font-size: 4em;
+  line-height: 1;
 
-    @include mixColors {
-        color: $backgroundColor;
-    }
+  @include mixColors {
+    color: $colors-red-alt;
+  }
 }

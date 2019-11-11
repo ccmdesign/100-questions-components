@@ -1,68 +1,75 @@
 .button {
-    display: inline-block;
-    font-size: 1.125em;
-    font-weight: 600;
-    background-color: $colors-white;
-    text-transform: uppercase;
-    padding: 16px 126px 18px 126px;
-    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.16);
-    text-align: center;
-    color: $colors-dark;
-    transition: background-color 0.13s $transition-regular;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 13px 18px 13px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  color: white;
+  transition: all .6 ease-in;
+  font-size: 1.125em;
+  font-weight: 600;
+  background-color: $colors-white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: $colors-dark;
+  transition: background-color 0.13s $transition-regular;
 
-    @include breakpoint($small-only) {
-        padding: 16px 64px 18px 64px;
-    }
+  @include breakpoint($small-only) {
+      padding: 16px 36px 18px 36px;
+  }
 
-    &--small {
-        padding: 16px 48px 18px 48px;
-    }
+  &--small {
+      padding: 8px 24px 8px 24px;
+  }
 
-    &--shadowless {
-        box-shadow: none;
-    }
+  &--shadowless {
+      box-shadow: none;
+  }
 
-    &:hover {
-        background-color: $colors-white;
-        color: $colors-black;
-        text-decoration: none;
-    }
+  &:hover {
+      background-color: $colors-white;
+      color: $colors-black;
+      text-decoration: none;
+  }
 
-    &:disabled {
-        pointer-events: none;
-        opacity: 0.67;
-    }
+  &:disabled {
+      pointer-events: none;
+      opacity: 0.67;
+  }
 
-    &--alt {
-        border-radius: 4px;
-        font-size: 0.9em;
-        padding: 18px 64px 18px 64px;
-        box-shadow: none;
-    }
+  &--alt {
+      border-radius: 4px;
+      font-size: 0.9em;
+      padding: 14px 32px 16px 32px;
+      box-shadow: none;
+  }
 
-    &--block {
-        display: block;
-    }
+  &--block {
+      display: block;
+  }
 
-    &--block-on-touch {
-        @include breakpoint($touch) {
-            display: block;
-            width: 100%;
-        }
-    }
+  &--block-on-touch {
+      @include breakpoint($touch) {
+          display: block;
+          width: 100%;
+      }
+  }
 
-    @include mixColors {
-        background-color: $backgroundColor;
-        color: $fontColor;
+  @include mixColors {
+      background-color: $backgroundColor;
+      color: $fontColor;
 
-        &:hover {
-            color: $fontColor;
-            background-color: lighten($backgroundColor, 5);
-        }
-    }
+      &:hover {
+          color: $fontColor;
+          background-color: lighten($backgroundColor, 5);
+      }
+  }
 }
 
 button.button {
-    border: 0;
-    cursor: pointer;
+  border: 0;
+  cursor: pointer;
 }
+
