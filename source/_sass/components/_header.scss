@@ -26,6 +26,11 @@
 
         .header-text {
             color: $fontColor;
+
+            a, a:hover, a:active {
+                color: lighten($fontColor, 15);
+                text-decoration: underline;
+            }
         }
     }
 
@@ -75,6 +80,11 @@
 
         @include breakpoint($large) {
             margin: 0 33%;
+        }
+
+        a, a:hover, a:active {
+            color: lighten($colors-gray-blue, 15);
+            text-decoration: underline;
         }
     }
 
