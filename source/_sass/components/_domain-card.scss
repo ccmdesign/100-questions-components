@@ -47,20 +47,37 @@
         padding: 32px 0 64px 48px;
 
         h2 {
-            font-size: 2em;
+            font-size: 1.125em;
             line-height: 1;
             text-transform: uppercase;
+
+            @include breakpoint($medium) {
+                font-size: 1.25;
+            }
+
+            @include breakpoint($large) {
+                font-size: 2em;
+            }
         }
 
         h3 {
-            font-size: 1.5em;
+            font-size: 1.125em;
             line-height: 1;
             color: rgba($colors-white, 0.4);
             text-transform: uppercase;
+
+            @include breakpoint($large) {
+                font-size: 1.5em;
+            }
         }
 
         p {
             margin: 24px 0 0 0;
+
+            a, a:hover, a:active {
+                color: $colors-white;
+                text-decoration: underline;
+            }
         }
 
     }
@@ -87,6 +104,12 @@
 
         .domain-card__content h3 {
             color: rgba($fontColor, 0.4);
+        }
+
+        .domain-card__content p {
+            a, a:hover, a:active {
+                color: lighten($fontColor, 15);
+            }
         }
     }
 
