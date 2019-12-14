@@ -1,3 +1,18 @@
+.navigation-top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(black, .1);
+    padding: 24px;
+    text-align: left;
+
+    img {
+        height: 16px;
+        margin-left: 96px;
+    }
+}
+
 .navigation-overlay {
     position: fixed;
     width: 100%;
